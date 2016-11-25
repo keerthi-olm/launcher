@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>OLM Systems</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+
+
+html { /* full width cover background image*/
+  background: url(img/elderly-low.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body::before,body::after {position: fixed;}
+body::before {
+  top:2.08%;
+  left:3.74%; 
+  background: url(img/logo.png) no-repeat; 
+  width:11.65%;
+  height:200px;
+  content: '';
+  background-size: contain;
+  min-width: 200px;
+}
+body::after {
+    width: 100%;
+    height: 10%;
+    background: url(img/footerfull.png) no-repeat; 
+    background-size: 100%;
+    content: '';
+    display: block;
+    bottom: 0px;
+    padding-bottom: 30px !important;
+    left:0px;
+}
+
+.c { margin-left: 26.16%;} /*main container*/
+
+ul.list-centered { text-align: center; }
+
+.middle::before {
+
+    background: url(img/touchIcon.png) no-repeat;
+    width: 239px;
+    height: 138px;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-size: contain;
+    top: -9em;
+    left: 40%;
+
+}
+ul.list-centered li {   float: left;
+                        list-style-type: none; 
+                        display: inline-block;
+                        position: relative;
+                       /* width: 20%;*/
+                      }
+
+ul.list-centered a {     
+/*  display: block; -kv*/
+display: inline-block;
+  margin-right: 15px;
+   height: 103px;
+  width: 116px;
+  z-index: 10;
+  position: relative;
+  cursor:pointer;
+
+  }
+ul.list-centered .multi-agency>a, ul.list-centered .mylife>a  {     
+
+   height: 123px;
+
+  }
+
+ul.list-centered li > a:hover, ul.list-centered li.active > a{height:80px;}
+
+.middle {
+
+left: 50%;
+position: absolute;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 100%;
+background-color:green;
+color:#fff;
+  text-align:center;
+  min-height: 22.222%;
+  background: url(img/bl-strip.png) repeat center center; 
+
+}
+
+.nav {margin: 0 auto !important;}
+
+.strip {
+  /*background-color: #155fba;*/
+  /*padding: 0 25%;*/
+  /*width: 47.678%;
+*/
+}
+
+/*layering navigation icons */
+.case-recording {z-index: 110;}
+.multi-agency {z-index: 109;}
+.finance {z-index: 108;}
+.mylife {z-index: 107;}
+.commissioner {z-index: 106;}
+
+
+.case-recording,.multi-agency,.finance,.cictizens {
+  position: relative;
+  
+}
+
+
+/*Images for naviagtion*/
+
+.case-recording a{
+    background: url(img/case-recording.png) no-repeat;  
+    background-size: cover;
+
+  }
+
+.multi-agency a{
+    background: url(img/guardian2.png) no-repeat;  
+    background-size: cover;
+
+  }
+.finance a{
+    background: url(img/finance.png) no-repeat;  
+    background-size: cover;
+
+  }
+.mylife a{
+    background: url(img/mylife2.png) no-repeat;  
+    background-size: cover;
+
+  }
+.commissioner a{
+    background: url(img/commissioner.png) no-repeat;  
+    background-size: cover;
+
+  }
+
+
+/*Speach bubble overlay*/
+.case-recording a:hover + span,.case-recording.active span, .multi-agency a:hover+span,.multi-agency.active span,.finance a:hover+span,.finance.active span,.mylife a:hover+span,.mylife.active span, .commissioner a:hover+span,.commissioner.active span{
+    display: inline-block;
+    content: ' ';
+    height: 296px;
+    width: 271px;
+    position: absolute;
+    top: -01.1em;
+    left: -10.5em;
+    z-index: 5;
+       opacity: 1;
+              transition: opacity .50s ease-in-out;
+   -moz-transition: opacity .50s ease-in-out;
+   -webkit-transition: opacity .50s ease-in-out;
+   cursor:pointer;
+
+}
+
+.case-recording a:hover + span,.case-recording.active span{
+  display: inline-block;
+    background: url(img/eclipse-overlay.png) no-repeat;
+    background-size: cover;
+
+
+}
+
+
+ .multi-agency a:hover+span,.multi-agency.active span{
+  display: inline-block;
+    background: url(img/guardian-ol.png) no-repeat;
+    background-size: cover;
+ /*   left: -11.35em;
+    top: -1.3em;*/
+
+}
+
+ .finance a:hover+span,.finance.active span{
+  display: inline-block;
+    background: url(img/finance-ol.png) no-repeat;
+    background-size: cover;
+
+}
+ .mylife a:hover+span,.mylife.active span{
+  display: inline-block;
+    background: url(img/mylife-ol.png) no-repeat;
+    background-size: cover;
+
+}
+
+ .commissioner a:hover+span,.commissioner.active span{
+  display: inline-block;
+    background: url(img/commissioner-adult-ol.png) no-repeat;
+    background-size: cover;
+    width: 556px;
+    height: 298px;
+    top: -1em;
+    left: -29.55em;
+
+}
+
+
+.multi-agency > a,.mylife> a  {
+    background-size: cover;
+    height: 140px ;
+}
+
+ .commissioner > span p{  display: none;}
+
+ .commissioner.active > span p:nth-child(1), .commissioner > span p:nth-child(2){ 
+    width: 360px;
+    height: 200px;
+    display: inline-block;
+    position: absolute;
+
+}
+
+ .commissioner.active > span p:nth-child(2){ 
+
+
+    bottom: -1.5em;
+    right: 0;
+}
+ .commissioner.active > span p:nth-child(1){ 
+
+    bottom: -1.5em;
+    left: 0;
+}
+ul.list-centered {
+    padding: 5% 0 13% 0;
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+  .middle {
+
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color:green;
+  color:#fff;
+    text-align:center;
+    min-height: 22.222%;
+    background: url() repeat center center fixed; 
+
+  }
+
+  .large-screen-wrapper {
+    display: block;
+    background: url(img/bl-strip.png) repeat center center fixed; 
+    max-height: 90%;
+  }
+
+ul.list-centered {
+    padding: 5% 0 13% 0;
+}
+
+  .case-recording a:hover + span, .case-recording.active span, .multi-agency a:hover+span, .multi-agency.active span, .finance a:hover+span, .finance.active span, .mylife a:hover+span, .mylife.active span, .commissioner a:hover+span, .commissioner.active span {
+    height: 380px;
+    width: 345px;
+    top: -02.2em;
+    left: -12.7em;
+
+  }
+
+  .commissioner a:hover+span, .commissioner.active span {
+    top: -2.3em;
+    left: -39.3em;
+    height: 400px;
+    width: 745px;
+  }
+  ul.list-centered li {   width: 20%;}
+}
+
+
+/* Ipad screens ----------- */
+@media only screen  and (max-width : 1300px) {
+/* Styles */
+.middle {
+
+left: 50%;
+position: absolute;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 140%;
+background-color:green;
+color:#fff;
+  text-align:center;
+  min-height: 22.222%;
+  background: url(img/bl-strip.png) repeat center center; 
+
+}
+}
+
+
+/* Mobile screens ----------- */
+@media only screen  and (max-width : 550px) {
+/* Styles */
+  .middle {
+
+  left: 50%;
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color:green;
+  color:#fff;
+    text-align:center;
+    min-height: 22.222%;
+    background: url() repeat center center fixed; 
+
+  }
+
+  
+  .twelve.columns.strip {
+    right: 200px !important;
+  }
+
+  body::before {
+    top: 2.08%;
+    left: 30%;
+  }
+
+  div.middle::before {
+
+    left: 25%;
+  }
+
+  
+  .c { margin-left: 26.16%;width:47.678%;} /*main container*/
+
+
+  .middle {
+    left: 50%;
+  }
+
+ul.list-centered {
+    padding: 5% 0 13% 20%;
+}
+
+  .case-recording a:hover + span, .case-recording.active span, .multi-agency a:hover+span, .multi-agency.active span, .finance a:hover+span, .finance.active span, .mylife a:hover+span, .mylife.active span, .commissioner a:hover+span, .commissioner.active span {  }
+
+
+
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class='middle'>
+    <div class='large-screen-wrapper'>
+      <div class="container c">
+    <div class="row">
+      <div class="twelve columns strip">
+ 
+            <ul class='list-centered'>
+              <li class='case-recording'><a  onmouseover="dim(this)" onmouseout='lighten(this)'  id="case-recording" target="blank" onMouseup="interaction(this)"></a><span   onMouseup="window.location='https://ecl4-salesview.olmdemo.co.uk/eclipse/login'" onFocus="" onBlur=""></span></li>
+              <li class='multi-agency'><a onmouseover="dim(this)" onmouseout='lighten(this)'  target="blank" onMouseup="interaction(this)"></a><span  onMouseup="window.location='https://mpr1-salesview.olmdemo.co.uk/mash/spring/login'" ></span></li>
+              <li class='finance'><a onmouseover="dim(this)" onmouseout='lighten(this)'  id="engagement" target="blank"  onMouseup="interaction(this)"></a><span  onMouseup="window.location='https://fis2-salesview.olmdemo.co.uk/fiscal/login'" ></span></li>
+              <li class='mylife'><a onmouseover="dim(this)" onmouseout='lighten(this)'  id="engagement" target="blank" onMouseup="interaction(this)"></a><span  onMouseup="window.location='https://sales.mylifeportal.co.uk/home/'"></span></li>
+              <li class='commissioner'><a  onmouseover="dim(this)" onmouseout='lighten(this)' id="engagement" target="blank" onMouseup="interaction(this)"></a><span> <p  onMouseup="window.location='https://hcpa.mylifetest.co.uk/'"></p><p  onMouseup="window.location='https://cmc1-salesview.olmdemo.co.uk/contractmanagement/login'"></p></span></li>
+            </ul>
+    
+      </div>
+    </div>
+  </div>
+  </div>  
+  </div>
+<script type="text/javascript">
+ 
+ // Disable links
+ var links = document.querySelectorAll(".list-centered li>a");
+ for (i = 0, len = links.length; i < len; i++) {
+     links[i].addEventListener('click', function(e) {
+         e.preventDefault();
+     });
+ }
+
+ // var el = document.getElementsByClassName("list-centered");
+ var interaction = function(e) {
+     // e.target.setAttribute("class", "active");
+console.log(e);
+     var elems = document.querySelectorAll(".list-centered li");
+     lighten(this);
+
+     [].forEach.call(elems, function(el) {
+         el.classList.remove("active");
+     });
+
+     var hasClass = e.parentElement.classList.contains("active");
+     if (!hasClass) { // Set class active on list item TODO: error check for what has been clicked
+         e.parentElement.className += " " + "active";
+         console.log(e.target);
+     }
+
+ };
+
+
+ // el[0].addEventListener('click', interaction, false);
+
+
+ function dim(x) { // Dim active overlay
+
+     if (!x.parentElement.classList.contains("active")) {
+         var elems = document.querySelectorAll(".active span");
+         var element = document.getElementById('id');
+         // element.style.opacity = "0.9";
+         [].forEach.call(elems, function(el) {
+             el.style.opacity = "0.1";
+         });
+
+     };
+
+
+ }
+
+ function lighten(x) { // On mouse OUT Lighten  active overlay
+     var elems = document.querySelectorAll(".active span");
+     var element = document.getElementById('id');
+     // element.style.opacity = "0.9";
+     [].forEach.call(elems, function(el) {
+         el.style.opacity = "1";
+     });
+
+ }
+
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+
+
+html { 
+  background: url(img/elderly-low.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}*/
+.c { margin-left: 26.16%;width:47.678%;}
+
+ul.list-centered { text-align: center; }
+ul.list-centered li {   float: left;
+    list-style-type: none; display: inline-block;position: relative;}
+
+ul.list-centered a {     
+  display: block;
+    margin-right: 15px;
+     height: 103px;
+    width: 115px;
+
+    z-index: 10;
+    position: relative;
+
+  }
+
+.nav {margin: 0 auto !important;}
+
+
+.middle {
+
+left: 50%;
+position: absolute;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 100%;
+background-color:green;
+color:#fff;
+  text-align:center;
+  min-height: 22.222%;
+  background: url(img/bl-strip.png) repeat center center fixed; 
+
+}
+
+.strip {
+  /*background-color: #155fba;*/
+  /*padding: 0 25%;*/
+  width: 47.678%;
+
+}
+
+.case-recording {z-index: 110;}
+.multi-agency {z-index: 109;}
+.finance {z-index: 108;}
+.mylife {z-index: 107;}
+.commissioner {z-index: 106;}
+
+
+.case-recording,.multi-agency,.finance,.cictizens {
+  position: relative;
+  
+}
+
+
+
+.case-recording a{
+    background: url(img/case-recording.png) no-repeat;  
+    background-size: cover;
+
+  }
+
+.multi-agency a{
+    background: url(img/guardian.png) no-repeat;  
+    background-size: cover;
+
+  }
+.finance a{
+    background: url(img/finance.png) no-repeat;  
+    background-size: cover;
+
+  }
+.mylife a{
+    background: url(img/mylife.png) no-repeat;  
+    background-size: cover;
+
+  }
+.commissioner a{
+    background: url(img/commissioner.png) no-repeat;  
+    background-size: cover;
+
+  }
+
+
+.case-recording a:hover + span,.case-recording.active span, .multi-agency a:hover+span,.multi-agency.active span,.finance a:hover+span,.finance.active span,.mylife a:hover+span,.mylife.active span, .commissioner a:hover+span,.commissioner.active span{
+    display: inline-block;
+    content: ' ';
+    height: 296px;
+    width: 271px;
+    position: absolute;
+    top: -01.1em;
+    left: -10.5em;
+    z-index: 5;
+}
+
+.case-recording a:hover + span,.case-recording.active span{
+  display: inline-block;
+    background: url(img/eclipse-overlay.png) no-repeat;
+    background-size: cover;
+
+}
+
+
+ .multi-agency a:hover+span,.multi-agency.active span{
+  display: inline-block;
+    background: url(img/guardian-ol.png) no-repeat;
+    background-size: cover;
+    left: -11.35em;
+    top: -1.3em;
+
+}
+
+ .finance a:hover+span,.finance.active span{
+  display: inline-block;
+    background: url(img/finance-ol.png) no-repeat;
+    background-size: cover;
+
+}
+ .mylife a:hover+span,.mylife.active span{
+  display: inline-block;
+    background: url(img/mylife-ol.png) no-repeat;
+    background-size: cover;
+
+}
+
+ .commissioner a:hover+span,.commissioner.active span{
+  display: inline-block;
+    background: url(img/commissioner-adult-ol.png) no-repeat;
+    background-size: cover;
+    width: 556px;
+    height: 298px;
+    top: -1em;
+    left: -29.55em;
+
+}
+
+
+.multi-agency > a,.finance > a  {
+    background-size: contain;
+    height: 113px !important;
+}
+
+
+
+/*.case-recording:hover {
+  position: relative;
+   z-index: 10;
+}*/
+
+
+/*.case-recording  a:active {
+    background-color: yellow;
+}*/
+</style>
+
+
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class='middle'>
+      <div class="container c">
+    <div class="row">
+      <div class="twelve columns strip">
+       <div class='nav'>
+            <ul class='list-centered'>
+              <li class='case-recording'><a  onmouseover="dim(this)" onmouseout='lighten(this)' href="javascript: void(0)"  id="case-recording" target="blank"></a><span></span></li>
+              <li class='multi-agency'><a onmouseover="dim(this)" onmouseout='lighten(this)' href="http://sales.mylifeportal.co.uk/home" id="engagement" target="blank"></a><span></span></li>
+              <li class='finance'><a onmouseover="dim(this)" onmouseout='lighten(this)' href="http://sales.mylifeportal.co.uk/home" id="engagement" target="blank"></a><span></span></li>
+              <li class='mylife'><a onmouseover="dim(this)" onmouseout='lighten(this)' href="http://sales.mylifeportal.co.uk/home" id="engagement" target="blank"></a><span></span></li>
+              <li class='commissioner'><a href="http://sales.mylifeportal.co.uk/home" onmouseover="dim(this)" onmouseout='lighten(this)' id="engagement" target="blank"></a><span></span></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+    
+  </div>
+<script type="text/javascript">
+ 
+  // Disable links
+ var anchors = document.getElementsByTagName('a');
+ for(i=0, len=anchors.length; i<len; i++){
+     anchors[i].addEventListener('click', function(e){e.preventDefault();});
+ }
+
+var el=document.getElementsByClassName("list-centered");
+var myFunction = function(e) {
+          // e.target.setAttribute("class", "active");
+
+          var elems = document.querySelectorAll(".list-centered li");
+    lighten(this);
+
+      [].forEach.call(elems, function(el) {
+          el.classList.remove("active");
+      });
+
+      var hasClass = e.target.parentElement.classList.contains("active");
+      if (!hasClass) {e.target.parentElement.className += " " + "active";
+          console.log(e.target);}
+
+ };
+
+
+    el[0].addEventListener('click', myFunction, false);
+function dim(x) {
+
+  if (!x.parentElement.classList.contains("active")) {
+                var elems = document.querySelectorAll(".active span");
+var element = document.getElementById('id');
+// element.style.opacity = "0.9";
+      [].forEach.call(elems, function(el) {
+          el.style.opacity = "0.1";
+      });
+
+};
+
+
+}
+
+function lighten(x) {
+            var elems = document.querySelectorAll(".active span"); 
+var element = document.getElementById('id');
+// element.style.opacity = "0.9";
+      [].forEach.call(elems, function(el) {
+          el.style.opacity = "1";
+      });
+
+}
+
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
